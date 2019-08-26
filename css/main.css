@@ -1,0 +1,221 @@
+.vertical_center {
+  display: flex;
+  align-items: center;
+}
+.button {
+  background-color: #f76b07;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.button:hover {
+  background-color: #ffffff;
+  color: #f76b07;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+body {
+  font-family: 'Gudea', sans-serif;
+  color: #0a0a0a;
+  font-size: 18px;
+  line-height: 23px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.header .header_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header_nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+.header .header_nav a:last-child {
+  display: none;
+}
+.header .header_nav a:hover {
+  border-bottom: 2px solid #0a0a0a;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 80px;
+}
+.footer .footer_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer_nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+.footer .footer_nav a:last-child {
+  display: none;
+}
+.footer .footer_nav a:hover {
+  border-left: 1px solid #0a0a0a;
+  border-right: 1px solid #0a0a0a;
+}
+.footer .footer_phone {
+  display: flex;
+  align-items: center;
+}
+.footer .footer_phone img {
+  margin-right: 20px;
+}
+.footer .footer_phone span {
+  padding: 10px 15px;
+}
+.footer .footer_contacts {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.footer .footer_contacts .footer_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../Img/footer_icon.png');
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  padding-bottom: 3px;
+}
+.footer .footer_contacts .facebook_icon {
+  background-position: -30px 0px;
+}
+.footer .footer_contacts .google_plus_icon {
+  background-position: -55px 0;
+}
+.footer .footer_contacts .in_icon {
+  background-position: -85px 0;
+}
+.footer .footer_copyright {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #2f67a3;
+  width: 100%;
+  text-align: center;
+}
+.main {
+  text-align: center;
+  height: 100%;
+  background-color: #2f67a3;
+  color: #fff;
+}
+.main .width_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+.main h1 {
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+.main p {
+  margin-top: 30px;
+}
+.main form {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main form input {
+  padding: 10px 15px;
+  padding-left: 40px;
+  border-radius: 5px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.main form input:hover {
+  border-color: #f76b07;
+}
+.main form input[name="name"] {
+  background-image: url('../Img/icon_name.png');
+}
+.main form input[name="phone"] {
+  background-image: url('../Img/icon_phone.png');
+}
+.main form input[name="email"] {
+  background-image: url('../Img/icon_mail.png');
+}
+.main form button {
+  background-color: #f76b07;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.main form button:hover {
+  background-color: #ffffff;
+  color: #f76b07;
+}
+.main .laptop {
+  position: absolute;
+  background-image: url('../Img/header_laptop.png');
+  width: 650px;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: 50 50;
+  bottom: -50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.main .laptop img {
+  padding-top: 19px;
+}
+.main .laptop:before,
+.main .laptop:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.main .laptop:before {
+  left: 0;
+  transform: rotate(45deg);
+}
+.main .laptop:after {
+  right: 0;
+  transform: rotate(-135deg);
+}
+.main .laptop:hover:before,
+.main .laptop:hover:after {
+  opacity: 1;
+}
