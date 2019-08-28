@@ -22,6 +22,53 @@
             <a href='#' id="menu" class="menu_icon">&#9776;</a>          
         </div>    
     </header>
+    <div class="happy_clients">
+        <div class="happy_clients_width_container">
+            <h2>Happy clients</h2>
+            <p>Your opinion is important to us.</p>
+            <div class="happy_clients_container">
+                <div>
+                    <img src="img/happy_clients_1.png" alt="foto">
+                    <h3>Lucky Rabbit</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi a rerum similique rem, sapiente fugit delectus accusamus accusantium blanditiis?</p>
+                </div>
+                <div>
+                    <img src="Img/happy_clients_2.png" alt="foto">
+                    <h3>Pozitiv4ik</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente inventore qui atque quidem esse. Beatae ipsum quae deserunt, quod sint consectetur.</p>
+                </div>
+                <div>
+                    <img src="img/happy_clients_3.png" alt="foto">
+                    <h3>Baby boom</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, beatae sapiente praesentium tempore, nisi ex odit molestiae dolore possimus cumque.</p>
+                </div>
+                <div>
+                    <img src="Img/happy_clients_4.png" alt="foto">
+                    <h3>Mr Ice</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, beatae sapiente praesentium tempore, nisi ex odit molestiae dolore possimus cumque aut.</p>
+                </div>
+            </div>
+            <button id='write_us'>write us</button>
+        </div>
+    </div>
+    <div class="popup hide_popup" id='popup'>
+        <h2>Write your opinion</h2>
+        <form action="#" method="GET">
+            <div>
+                <h3>Introduce yourself</h3>
+                <input type="text" name="name" id="newName" placeholder="Introduce please" required>
+            </div>
+            <div>
+                <h3>Comment</h3>
+                <textarea name="comment" id="comment" cols="30" rows="5" maxlength='150' placeholder="Write your comment here" required></textarea>
+            </div>
+            <div class="buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <span class="closer">[x]</span>
+    </div>
     <footer class="footer">
         <div class="footer_nav">
             <a href="index.html">Home</a>
@@ -45,6 +92,7 @@
         <div class="footer_copyright">
                 &#169; "Business for you", all rights reserved 2019
         </div>
+        <script src="js/popup.js"></script>
     </footer>
 </body>
 </html>
