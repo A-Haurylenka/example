@@ -4,19 +4,44 @@
 }
 .absolute {
   display: block;
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   background-color: #fff;
   opacity: 0.5;
+  z-index: 5;
+  top: 0;
 }
 .alert {
+  position: fixed;
   display: block;
-  width: 150px;
+  width: 250px;
   height: 150px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 30px;
+  text-align: center;
+  color: #0a0a0a;
+  font-size: 23px;
+  line-height: 30px;
+  top: 30%;
   border: 2px solid #0a0a0a;
-  background-color: #ebf2ed;
-  z-index: 2;
+  background-color: #fff;
+  z-index: 20;
+}
+.closer {
+  position: absolute;
+  z-index: 25;
+  color: red;
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  top: 5px;
+  right: 10px;
+}
+.closer:hover {
+  color: blue;
 }
 .button {
   background-color: #f76b07;
@@ -38,6 +63,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -52,6 +78,7 @@ body {
   color: #0a0a0a;
   font-size: 18px;
   line-height: 23px;
+  position: relative;
 }
 .header {
   display: flex;
@@ -141,6 +168,7 @@ body {
 .main {
   text-align: center;
   height: 100%;
+  min-height: 550px;
   background-color: #2f67a3;
   color: #fff;
 }
@@ -197,7 +225,7 @@ body {
   color: #f76b07;
 }
 .main .laptop {
-  position: absolute;
+  position: relative;
   background-image: url('../Img/header_laptop.png');
   width: 650px;
   height: 350px;
@@ -210,28 +238,112 @@ body {
 .main .laptop img {
   padding-top: 19px;
 }
-.main .laptop:before,
-.main .laptop:after {
-  content: "";
+.main .laptop .laptop_container {
+  width: 445px;
+  height: 265px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main .laptop .laptop_container .laptop_slide {
+  width: 445px;
+  height: 265px;
   position: absolute;
+  transition: all ease 1s;
+  left: 0;
+  top: 0;
+}
+.main .laptop .laptop_left {
   display: block;
+  position: absolute;
   width: 20px;
   height: 20px;
-  border-left: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  top: 45%;
-  cursor: pointer;
+  border-left: 2px solid #ebf2ed;
+  border-bottom: 2px solid #ebf2ed;
   opacity: 0.6;
-}
-.main .laptop:before {
-  left: 0;
+  top: 45%;
   transform: rotate(45deg);
 }
-.main .laptop:after {
-  right: 0;
-  transform: rotate(-135deg);
-}
-.main .laptop:hover:before,
-.main .laptop:hover:after {
+.main .laptop .laptop_left:hover {
   opacity: 1;
+}
+.services {
+  background-color: #ebf2ed;
+}
+.services .services_width_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.services .services_width_container h2 {
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.services .services_width_container p {
+  margin-bottom: 20px;
+}
+.services .services_width_container .services_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.services .services_width_container .services_section div {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.services .services_width_container .services_section img {
+  width: 45px;
+  margin-right: 30px;
+}
+.services .services_width_container .services_section div:last-child img {
+  margin-right: 42px;
+}
+.about_us {
+  background-color: #f76b07;
+  color: white;
+}
+.about_us .about_us_width_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about_us .about_us_width_container .about_us_section {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.about_us .about_us_width_container .about_us_section h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.about_us .about_us_width_container .about_us_section div {
+  max-width: 550px;
+}
+.about_us .about_us_width_container .about_us_section div img {
+  width: 550px;
+}
+.about_us .about_us_width_container .about_us_our_works {
+  text-align: center;
+}
+.about_us .about_us_width_container .about_us_our_works h2 {
+  text-transform: uppercase;
+}
+.about_us .about_us_width_container .about_us_our_works div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.about_us .about_us_width_container .about_us_our_works img {
+  max-width: 380px;
+  cursor: zoom-in;
+  margin: 10px;
 }

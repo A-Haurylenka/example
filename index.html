@@ -30,10 +30,16 @@
                 <div><input type="text" name="name" id="name" placeholder="full name" required></div>
                 <div><input type="text" name="email" id="email" placeholder="Your email"></div>
                 <div><input type="text" name="phone" id="phone" placeholder="Your phone" required></div>
-                <button tabindex="submit">Submit</button>
+                <button type="submit" >Submit</button>
             </form>
-            <div class="laptop">
-                <img src="Img/header_img.jpg" alt="Something">
+            <div class="laptop" id="laptop">
+                <span class="laptop_left"></span>
+                <div class="laptop_container">                    
+                    <img src="Img/header_img.jpg" class="laptop_slide" alt="Something">
+                    <img src="Img/header2_img.jpg" class="laptop_slide" alt="Something">
+                    <img src="Img/header3_img.jpg" class="laptop_slide" alt="Something">
+                    <img src="Img/header1_img.jpg" class="laptop_slide" alt="Something">                    
+                </div>               
             </div>
         </div>
     </main>
@@ -61,6 +67,7 @@
                 &#169; "Business for you", all rights reserved 2019
         </div>
         <script src="js/scripts.js"></script>
+        <script src="js/slider.js"></script>
     </footer>
 </body>
 </html>
