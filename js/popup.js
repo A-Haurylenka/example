@@ -26,7 +26,7 @@ var randomSrc = (arr) => {
 
 
 var newListComment = () => {  
-    var newComment = document.createElement('div');   
+    var newComment = document.createElement('div');      
     var newCommentName = document.createElement('h3');
     var newCommentText = document.createElement('p');
     var newImg = document.createElement('img');    
@@ -47,14 +47,20 @@ var newListComment = () => {
 submitComment.addEventListener('submit', function(event) {
     event.preventDefault();          
     commentContainer.append(newListComment());
-    popup.classList.add('hide_popup');
-    closerComment.onclick = () => {
-        newComment.remove();
-    }
+    popup.classList.add('hide_popup');    
     nameComment.value = '';
-    textComment.value = '';
-    
-
+    textComment.value = '';  
+    var commentCloser = document.querySelectorAll('.closer');     
+    for(var i = 0; i < commentCloser.length; i++) {
+        commentCloser[i].onclick = function () {
+            var div = this.parentElement;
+            div.classList.add('hide_popup');
+        }
+    }   
 });
+
+
+
+
 
 

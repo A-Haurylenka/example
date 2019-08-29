@@ -1,0 +1,46 @@
+@media (max-width: 730px) {
+    .header .header_nav {
+        min-width: 350px;
+        flex-direction: column;
+    }
+    .header_nav a:not(:first-child) {
+        display: none;        
+    }    
+    .footer .footer_nav {
+        display: none;        
+    }
+    .header .menu_icon  {
+        display: block;
+    }
+
+}
+@media (max-width: 670px) {
+    .main .laptop {
+        display: none;
+    }
+    .main form {
+        flex-direction: column;
+    }
+    .main {
+        height: 300px;
+    }
+}
+@media (max-width: 550px) {
+    .container {
+        margin: 0 2%;
+    }
+    .about_us .about_us_width_container .about_us_section div img {
+        width: 350px;
+    }
+    .about_us .about_us_width_container .about_us_section div {
+        padding: 10px;
+    }
+    .happy_clients .happy_clients_width_container .happy_clients_container div {
+        min-width: 400px;
+        padding: 10px;
+    }
+    .services .services_width_container .services_section div {
+        width: 400px;
+        padding: 10px;
+    }
+}

@@ -12,7 +12,7 @@
     height: 100%;
     width: 100%;
     background-color: #fff;
-    opacity: 0.5;
+    background-color: rgba(255,255,255, 0.6);
     z-index: 5;
     top: 0;
 }
@@ -20,10 +20,10 @@
     position: fixed;
     display: block;
     width: 250px;
-    height: 150px;
+    height: 180px;
     margin-left: 50%;
     transform: translateX(-50%);
-    padding: 30px;
+    padding: 25px;
     text-align: center;
     color: #0a0a0a;
     font-size: 23px;
@@ -32,6 +32,12 @@
     border: 2px solid #0a0a0a;
     background-color: #fff;
     z-index: 20;    
+}
+.clone_slide {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 10;
 }
 .closer {
     position: absolute;
@@ -43,12 +49,16 @@
     line-height: 20px;
     top: 5px;
     right: 10px;
+    cursor: pointer;
     &:hover {
         color: blue;
     }
 }
 .hide_popup {
     display: none;
+}
+.header div.header_nav a.show_menu {
+    display: block;
 }
 .button {
     background-color: #f76b07;
@@ -99,15 +109,20 @@ body {
         justify-content: space-between;        
         a {
             padding: @padding;            
-            text-transform: uppercase;
-            &:last-child {
-                display: none;
-            }
+            text-transform: uppercase;            
             &:hover {
                 border-bottom: 2px solid @font_color;
             }
+        }        
+    }
+    .menu_icon {
+        padding: @padding; 
+        display: none;
+        &:hover {
+            border-bottom: 2px solid @font_color;
         }
     }
+    
 }
 
     //FOOTER
@@ -175,7 +190,7 @@ body {
 .main {
     text-align: center;
     height: 100%;
-    min-height: 550px;
+    min-height: 650px;
     background-color: #2f67a3;
     color: #fff;  
     .width_container {
@@ -185,7 +200,8 @@ body {
     }
     h1 {        
         text-transform: uppercase; 
-        padding-top: 50px;      
+        padding-top: 50px;
+        line-height: 40px;      
     }
     p {
         margin-top: 30px;
@@ -193,7 +209,12 @@ body {
     form {
         margin-top: 30px;
         .vertical_center;
+        flex-wrap: wrap;
         justify-content: space-around;
+        div,
+        button {
+            margin-bottom: 20px;
+        }
         input {
             padding:@padding;
             padding-left: 40px;
@@ -305,8 +326,10 @@ body {
 .about_us  {
     background-color: #f76b07;
     color: white;
+    position: relative;
     .about_us_width_container {
-        .container;        
+        .container;       
+        min-height: 420px; 
         .about_us_section {
             h2 {
                 text-transform: uppercase;
@@ -337,7 +360,7 @@ body {
             }
             img {
                 max-width: 380px;
-                cursor: zoom-in;
+                
                 margin: 10px;
             }
         }        
